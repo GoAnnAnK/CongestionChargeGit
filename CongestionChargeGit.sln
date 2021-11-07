@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CongestionChargeGit", "CongestionChargeGit\CongestionChargeGit.csproj", "{EFFF2F6A-A32B-49A6-ABF1-75A9C97081FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFFF2F6A-A32B-49A6-ABF1-75A9C97081FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFFF2F6A-A32B-49A6-ABF1-75A9C97081FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFFF2F6A-A32B-49A6-ABF1-75A9C97081FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFFF2F6A-A32B-49A6-ABF1-75A9C97081FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F38EC3F4-EB07-4CBD-9445-03059238F17B}
+	EndGlobalSection
+EndGlobal

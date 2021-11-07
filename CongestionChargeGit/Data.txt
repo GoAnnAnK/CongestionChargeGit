@@ -1,0 +1,18 @@
+	{
+		"AutoType": "Car",
+		"startTime": "2008-04-24T11:32:00",
+		"endTime": "2008-04-24T14:42:00",
+		"type": 0
+	},
+	{
+		"AutoType": "Motorbike",
+		"startTime": "2008-04-24T17:00:00",
+		"endTime": "2008-04-24T22:11:00",
+		"type": 2
+	},
+	{
+		"AutoType": "Van",
+		"startTime": "2008-04-25T10:23:00",
+		"endTime": "2008-04-28T09:02:00",
+		"type": 2
+	}
