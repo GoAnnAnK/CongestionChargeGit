@@ -18,7 +18,14 @@ namespace CongestionChargeGit.Persistence.Models
         {
             return $"Id: {Id}; \n Your auto Type: {AutoType}; \n Your spent time {AllTime}; \n Your amount to pay: {Fee}   ";
         }
+        static void PrintBill(List<Transport> transportList)
+        {
+            foreach (var transport in transportList)
+            {
 
+                Console.WriteLine("Bill: ");
+            }
+        }
         internal void Example()
         {
             throw new NotImplementedException();

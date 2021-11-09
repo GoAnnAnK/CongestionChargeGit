@@ -7,17 +7,17 @@ using System.Globalization;
 using CongestionChargeGit.Persistence.Models;
 
 
-namespace CongestionChargeGit
-{
+namespace CongestionChargeGit.Calculations
+    {
     public abstract class CalculateBase
     {
-        public abstract void CalculateFee(Transport item);
-        public static  TimeCalc CalculateTime(Transport item)
+        public abstract void CalculateFee(Transport transport);
+        public static  TimeCalc CalculateTime(Transport transport)
         { 
             TimeSpan amHours = TimeSpan.Zero;
             TimeSpan pmHours = TimeSpan.Zero;
 
-            for (DateTime date = item.StartTime.Date; date <= item.EndTime.Date; date = date.AddDays(1))
+            for (DateTime date = transport.StartTime.Date; date <= transport.EndTime.Date; date = date.AddDays(1))
             {
                 if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
                 {
@@ -27,14 +27,14 @@ namespace CongestionChargeGit
                 TimeSpan startFeeTime = TimeRange.Start7Am;
                 TimeSpan endFeeTime = TimeRange.Start7Pm;
 
-                if (item.StartTime.Date == date && item.StartTime.TimeOfDay > TimeRange.Start7Am)
+                if (transport.StartTime.Date == date && transport.StartTime.TimeOfDay > TimeRange.Start7Am)
                 {
-                    startFeeTime = item.StartTime.TimeOfDay;
+                    startFeeTime = transport.StartTime.TimeOfDay;
                 }
 
-                if (item.EndTime.Date == date && item.EndTime.TimeOfDay < TimeRange.Start7Pm)
+                if (transport.EndTime.Date == date && transport.EndTime.TimeOfDay < TimeRange.Start7Pm)
                 {
-                    endFeeTime = item.EndTime.TimeOfDay;
+                    endFeeTime = transport.EndTime.TimeOfDay;
                 }
 
                 if (endFeeTime > startFeeTime)

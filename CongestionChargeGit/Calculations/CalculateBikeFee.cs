@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 using System.Globalization;
 using CongestionChargeGit.Persistence.Models;
 
-namespace CongestionChargeGit
+
+namespace CongestionChargeGit.Calculations
 {
-    public class CalculateCarFee : CalculateBase
+    public class CalculateBikeFee : CalculateBase
     {
         public override void CalculateFee(Transport item)
         {
             var calculateTime = CalculateTime(item);
             var fee = new TimePrice
             {
-                AmPrice = 2.0M,
-                PmPrice = 2.5M
+                AmPrice = 1.0M,
+                PmPrice = 1.0M
             };
 
             var feeForAm = Math.Floor((decimal)calculateTime.AmHours.TotalHours * fee.AmPrice * 10) / 10;

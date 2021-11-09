@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Globalization;
 using CongestionChargeGit.Persistence.Models;
 
-namespace CongestionChargeGit
+namespace CongestionChargeGit.Calculations
 {
     public class CalculateVanFee : CalculateBase
     {

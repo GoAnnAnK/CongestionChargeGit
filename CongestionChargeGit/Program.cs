@@ -49,15 +49,19 @@ namespace CongestionChargeGit
                         break;
 
                     case 3:
+
                         var app = new CongestionCharge(transportList);
                       
                        for (var i = 0; i < transportList.Count; i++)
                         {
+                        //    transportList[i].UpdateQuality();
                             Console.WriteLine(transportList[i]);
-                            app.UpdateQuality();
+                           
+
                         };
                         Console.WriteLine("");
-                 //       bill.Example();
+                        app.UpdateQuality();
+                        
                         break;
 
                     case 9:
