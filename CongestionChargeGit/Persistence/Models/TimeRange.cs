@@ -8,10 +8,10 @@ namespace CongestionChargeGit.Persistence.Models
 {
     public class TimeRange
     {
-        public static readonly TimeSpan Start7Am = TimeSpan.FromHours(7);
+        public static TimeSpan Start7Am = TimeSpan.FromHours(7);
 
-        public static readonly TimeSpan Start12Pm = TimeSpan.FromHours(12);
+        public static TimeSpan Start12Pm = TimeSpan.FromHours(12);
 
-        public static readonly TimeSpan Start7Pm = TimeSpan.FromHours(19);
+        public static TimeSpan Start7Pm = TimeSpan.FromHours(19);
     }
 }

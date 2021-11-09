@@ -9,7 +9,7 @@ namespace CongestionChargeGit.Contracts.Enums
     public enum AutoType
     {
         Car = 0,
-        LargeVehicles = 1,
+        Van = 1,
         Motorbike = 2
 
 

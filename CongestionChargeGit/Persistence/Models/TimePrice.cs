@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CongestionChargeGit.Persistence.Models
 {
-    public class BillExample
+    public class TimePrice
     {
+        public decimal AmPrice { get; set; }
+
+        public decimal PmPrice { get; set; }
     }
 }
