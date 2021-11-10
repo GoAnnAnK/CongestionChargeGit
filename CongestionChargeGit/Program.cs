@@ -12,7 +12,6 @@ namespace CongestionChargeGit
     {
         static void Main(string[] args)
         {
-
             IList<Transport> transportList = new List<Transport> {
                 new Transport { TransportId = Guid.NewGuid(), TransportType = "Car", StartTime = new DateTime( 2008,04,24, 11, 32,00), EndTime = new DateTime(2008, 04, 24, 14, 42, 00) },
                 new Transport { TransportId = Guid.NewGuid(), TransportType = "Motorbike", StartTime = new DateTime (2008, 04, 24, 17, 00, 00), EndTime =  new DateTime(2008, 04, 24, 22, 11 ,00) },
@@ -21,6 +20,7 @@ namespace CongestionChargeGit
             
             var choiceCommand = 7;
             var bill = new Bill();
+            var transport = new Transport();
             while (choiceCommand != 9)
             {
                 Console.WriteLine("Your choice : ");
@@ -34,18 +34,42 @@ namespace CongestionChargeGit
                 {
                     case 1:
                         Console.WriteLine("Select the type of transport: \n 1 - Car; \n 2 - Van \n 3 - Motorbike ");
-                        var choiceTransport = Console.ReadLine();
+                        var choiceTransport = int.Parse(Console.ReadLine());
+                        switch (choiceCommand) 
+                        {
+                            case 1:
+                               
+                            Console.WriteLine("Enter start time in   DD/MM/YYYY HH:MM  : ");
+                            var startTime = Console.ReadLine();
 
-                        Console.WriteLine("Enter start time in   DD/MM/YYYY HH:MM  : ");
-                        var startTime = Console.ReadLine();
+                            Console.WriteLine("Enter end time in   DD/MM/YYYY HH:MM  : ");
+                            var endTime = Console.ReadLine();
 
-                        Console.WriteLine("Enter end time in   DD/MM/YYYY HH:MM  : ");
-                        var endTime = Console.ReadLine();
 
-                        /*                        if(DateTime.Parse(endTime) < startTime)
-                                                 {
-                                                   Console.WriteLine("End time cannot be before start time!!!");
-                                                 }*/
+                            break;
+
+                            case 2:
+
+                                Console.WriteLine("Enter start time in   DD/MM/YYYY HH:MM  : ");
+                                startTime = Console.ReadLine();
+
+                                Console.WriteLine("Enter end time in   DD/MM/YYYY HH:MM  : ");
+                                endTime = Console.ReadLine();
+
+
+                                break;
+
+                            case 3:
+
+                                Console.WriteLine("Enter start time in   DD/MM/YYYY HH:MM  : ");
+                                startTime = Console.ReadLine();
+
+                                Console.WriteLine("Enter end time in   DD/MM/YYYY HH:MM  : ");
+                                endTime = Console.ReadLine();
+
+
+                                break;
+                        }
                         break;
 
                     case 3:
@@ -54,17 +78,17 @@ namespace CongestionChargeGit
                       
                        for (var i = 0; i < transportList.Count; i++)
                         {
-                        //    transportList[i].UpdateQuality();
+                            transportList[i].UpdateQuality();
                             Console.WriteLine(transportList[i]);
-                           
-
                         };
+
                         Console.WriteLine("");
                         app.UpdateQuality();
                         
                         break;
 
                     case 9:
+
                         Console.WriteLine("Good luck!!!");
                         break;
                 }
